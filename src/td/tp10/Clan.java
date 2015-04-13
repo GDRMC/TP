@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author GDRMc
  */
 public class Clan {
-    private ArrayList<Guerrier>elements;
+    private ArrayList<Guerrier>elements = new ArrayList();
     private String nom;
     
     Clan(String nom){ this.nom=nom; }
@@ -20,9 +20,10 @@ public class Clan {
         }
     }
     public String toString(){
-        String toReturn = "Le clan"+this.nom+" est composé de \n";
+        String toReturn = "Le clan '"+this.nom+"' est composé de \n";
         for(int i=0;i<elements.size();i++){
-            toReturn.concat(elements.get(i).toString()+"\n");
+            String toAdd = (elements.get(i).toString()+"\n");
+            toReturn = toReturn + toAdd;
         }
         return toReturn;
     }
