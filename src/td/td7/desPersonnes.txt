@@ -1,0 +1,26 @@
+25
+1         Dupond    Marc      h         1992      Surfeur   3
+12        Faisan    Jérémy    h         1983      Surfeur   2
+7         Hémond    Jeanne    f         1985      Surfeur   2
+3         Hervé     Jean      h         1986      Bosseur   2
+8         Yin       Trinn     f         1990      Bosseur   1
+21        Gomez     Eliane    f         1988      Bosseur   2
+15        Tellier   Natacha   f         1992      Athlète   2
+22        Sontag    Manon     f         1983      Surfeur   1
+5         Wallon    Jacques   h         1987      Athlète   3
+19        Walter    Yonn      h         1987      Bosseur   2
+24        Allais    Magali    f         1986      Bosseur   1
+31        Garcia    Penelope  f         1989      Athlète   1
+27        Alvaro    Xavier    h         1990      Athlète   1
+2         Wilson    John      h         1992      Surfeur   1
+9         Gimon     Geoffrey  h         1993      Bosseur   2
+6         Perrier   Hélène    f         1987      Athlète   3
+14        Leduc     Sylvain   h         1988      Bosseur   2
+17        Pigeon    Franck    h         1983      Surfeur   1
+20        Simenon   Elen      f         1985      Athlète   2
+31        Blanchard Eric      h         1988      Surfeur   1
+33        Boulin    Ingrid    f         1989      Surfeur   3
+34        Peteca    Inès      f         1990      Athlète   1
+32        Selman    Yonni     h         1992      Bosseur   1
+30        Lebec     Yann      h         1990      Bosseur   2
+37        Selin     Tiphaine  f         1985      Surfeur   1         

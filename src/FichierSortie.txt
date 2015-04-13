@@ -1,0 +1,22 @@
+Commande n°5 : 6 articles pour un montant de 55,50€
+Ligne n°123	Commande n°5	2 x Pizza Campagnarde	P.U : 10,50€ 
+Ligne n°125	Commande n°5	1 x Pizza 3 fromages	P.U : 10,00€ 
+Ligne n°126	Commande n°5	1 x Pizza Bolo	P.U : 10,90€ 
+Ligne n°127	Commande n°5	3 x Soda Orange	P.U : 1,50€ 
+Ligne n°128	Commande n°5	2 x Cookie Dought	P.U : 2,90€ 
+Ligne n°129	Commande n°5	3 x Barre chocolatée	P.U : 1,10€ 
+Commande n°3 : 4 articles pour un montant de 70,60€
+Ligne n°130	Commande n°3	3 x Pizza Saumon	P.U : 11,50€ 
+Ligne n°137	Commande n°3	2 x Barre chocolatée	P.U : 1,10€ 
+Ligne n°125	Commande n°3	2 x Pizza Tartiflette	P.U : 11,50€ 
+Ligne n°126	Commande n°3	1 x Pizza Exotique	P.U : 10,90€ 
+Commande n°4 : 4 articles pour un montant de 31,80€
+Ligne n°131	Commande n°4	2 x Pizza 3 fromages	P.U : 10,00€ 
+Ligne n°134	Commande n°4	1 x Cola Cola	P.U : 1,50€ 
+Ligne n°127	Commande n°4	3 x Raide boulle	P.U : 1,50€ 
+Ligne n°129	Commande n°4	2 x Peace of Cake	P.U : 2,90€ 
+Commande n°9 : 4 articles pour un montant de 53,90€
+Ligne n°133	Commande n°9	1 x Pizza bolo	P.U : 10,90€ 
+Ligne n°136	Commande n°9	3 x Cookie Dought	P.U : 2,90€ 
+Ligne n°123	Commande n°9	3 x Pizza Lorraine	P.U : 9,50€ 
+Ligne n°128	Commande n°9	2 x Fairly Nuts	P.U : 2,90€ 

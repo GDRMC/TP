@@ -1,0 +1,18 @@
+123       5         "Pizza Campagnarde"           2         10.5
+125       5         "Pizza 3 fromages"            1         10
+126       5         "Pizza Bolo"                  1         10.9
+127       5         "Soda Orange"                 3         1.5
+128       5         "Cookie Dought"               2         2.9
+129       5         "Barre chocolatée"            3         1.1
+130       3         "Pizza Saumon"                3         11.5
+131       4         "Pizza 3 fromages"            2         10
+133       9         "Pizza bolo"                  1         10.9
+134       4         "Cola Cola"                   1         1.5
+136       9         "Cookie Dought"               3         2.9
+137       3         "Barre chocolatée"            2         1.1  
+123       9         "Pizza Lorraine"              3         9.5
+125       3         "Pizza Tartiflette"           2         11.5
+126       3         "Pizza Exotique"              1         10.9
+127       4         "Raide boulle"                3         1.5
+128       9         "Fairly Nuts"                 2         2.9
+129       4         "Peace of Cake"               2         2.9 
