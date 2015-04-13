@@ -1,4 +1,4 @@
-package td.tp10;
+package tp.tp10;
 
 import java.util.ArrayList;
 

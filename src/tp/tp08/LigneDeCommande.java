@@ -1,3 +1,5 @@
+package tp.tp08;
+
 import java.io.*; // Pour pouvoir utiliser les fichiers
 import java.text.DecimalFormat ;
 

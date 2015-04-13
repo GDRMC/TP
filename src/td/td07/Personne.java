@@ -1,4 +1,4 @@
-package td.td7;
+package td.td07;
 
 import java.io.*; // Pour pouvoir utiliser les fichiers
 class Personne

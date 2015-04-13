@@ -1,3 +1,5 @@
+package tp.tp08;
+
 import java.io.*; // Pour pouvoir utiliser les fichiers
 import java.util.ArrayList ;
 import java.io.File ; // Pour pouvoir cr�er les objets de manipulation de fichiers
