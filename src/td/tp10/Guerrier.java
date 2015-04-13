@@ -52,12 +52,26 @@ class Guerrier
             this.force = entierAleatoire(forceMin,forceMax);
             this.nom = nom;
         }
+        Guerrier(){
+            this.experience = experienceMin;
+            this.age = entierAleatoire(ageMinDepart,ageMaxDepart);
+            this.etatSante = entierAleatoire(santeMin,santeMax);
+            this.force = entierAleatoire(forceMin,forceMax);
+            this.nom = "Anonyme";
+        }
 	
 		
 	/************ Méthodes **************/
         //Assesseurs
 	public int getForce(){ return this.force; }
         public int getExperience(){ return this.experience; }
+        
+        public void modifierExperience(int n){
+            this.experience+=n;
+        }
+        public void modifierSante(int n){
+            this.etatSante+=n;
+        }
 	
 	// Autres
         public void vieillir(){ this.age+=1; }
@@ -76,8 +90,24 @@ class Guerrier
                 return false;
             }
         }
+        public boolean estFaible(){
+            if(this.etatSante<this.limiteFaiblesse){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        public char affichage(){
+            if(!this.estFaible()){
+                return '|';
+            }else{
+                return '/';
+            }
+        }
+        
+        
 	
-	public void evoluer()
+	/*public void evoluer()
 	{
 		int delta = 0 ;
 		if(this.estJeune())
@@ -99,12 +129,27 @@ class Guerrier
 				if(chance(CHANCE_RENF_VIEUX_FAIBLE)) delta = DELTA_ETAT_RENF; else delta= DELTA_ETAT_AFFAIBL ;					
 	
 		this.modifierSante(delta) ;
-	}
+	}*/
 	
 	
 	/*********** Préparation à l'affichage  : méthode toString ******************/
 	public String toString(){
-            return "Le guerrier "+this.nom+" a "+this.force+" points de force, "+this.etatSante+" points de vie, "+this.experience+" points d'expérience, et est agé de "+this.age+" ans.";
+            String trancheAge = "";
+            if(this.age<=20){
+                trancheAge="jeune";
+            }else if(this.age>20&&this.age<50){
+                trancheAge="adulte";
+            }else if(this.age>=50){
+                trancheAge="vieux";
+            }
+            String toReturn =
+                    "Le guerrier "+this.nom+
+                    " a "+this.force+
+                    " points de force, "+this.etatSante+
+                    " points de vie, "+this.experience+
+                    " points d'expérience, et est agé de "+this.age+
+                    " ans, Il est donc "+trancheAge;
+            return toReturn;
         }
         
 	/************ Outils locaux (private) **********************/
