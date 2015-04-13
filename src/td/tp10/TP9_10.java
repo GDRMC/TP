@@ -66,6 +66,14 @@ public class TP9_10 {
         System.out.println(g4.getNom()+" est mort");
         
         //CLAN
-        
+        System.out.println("===>Création clan");
+        Clan c1 = new Clan("Le clan 2016");
+        c1.ajouter(new Guerrier("Void le Vide"));
+        c1.ajouter(new Guerrier("ZetaFoX le Renard Grec"));
+        c1.ajouter(new Guerrier("Emit le Paradoxal"));
+        c1.ajouter(new Guerrier("Furuoni le Balsamique"));
+        c1.ajouter(new Guerrier("Warrior la Madame"));
+        c1.ajouter(new Guerrier("Samuel l'Absent"));
+        System.out.println(c1.toString());
     }
 }
