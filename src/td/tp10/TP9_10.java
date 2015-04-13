@@ -11,6 +11,7 @@ package td.tp10;
  */
 public class TP9_10 {
     public static void main(String[]args){
+        //GUERRIER
         //A
         //crée deux guerriers
         Guerrier g1 = new Guerrier("Hector le Barbare");
@@ -53,5 +54,18 @@ public class TP9_10 {
         }else{
             System.out.println(gC.getNom()+" est mort");
         }
+        
+        //C
+        System.out.println("===>Evolution et vieillissement");
+        Guerrier g4 = new Guerrier("Mr Sale le poisseux");
+        System.out.println(g4.toString());
+        while(g4.estVivant()){
+            g4.vieillir();
+            System.out.println(g4.toString());
+        }
+        System.out.println(g4.getNom()+" est mort");
+        
+        //CLAN
+        
     }
 }

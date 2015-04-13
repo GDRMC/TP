@@ -75,7 +75,7 @@ class Guerrier
         }
 	
 	// Autres
-        public void vieillir(){ this.age+=1; }
+        public void vieillir(){ this.age+=1; this.evoluer(); }
 	
         public boolean estMort(){
             if(this.etatSante<=0){
