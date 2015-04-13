@@ -107,7 +107,7 @@ class Guerrier
         
         
 	
-	/*public void evoluer()
+	public void evoluer()
 	{
 		int delta = 0 ;
 		if(this.estJeune())
@@ -129,17 +129,17 @@ class Guerrier
 				if(chance(CHANCE_RENF_VIEUX_FAIBLE)) delta = DELTA_ETAT_RENF; else delta= DELTA_ETAT_AFFAIBL ;					
 	
 		this.modifierSante(delta) ;
-	}*/
+	}
 	
 	
 	/*********** Préparation à l'affichage  : méthode toString ******************/
 	public String toString(){
             String trancheAge = "";
-            if(this.age<=20){
+            if(this.estJeune()){
                 trancheAge="jeune";
-            }else if(this.age>20&&this.age<50){
+            }else if(this.estAdulte()){
                 trancheAge="adulte";
-            }else if(this.age>=50){
+            }else if(this.estVieux()){
                 trancheAge="vieux";
             }
             String toReturn =
@@ -156,6 +156,30 @@ class Guerrier
 	private static boolean chance(double x) {		return Math.random()<x ;	}
 	
 	private int entierAleatoire(int min, int max){ return (int)(min+(max+1-min)*Math.random()) ;}
+
+    public boolean estAdulte() {
+        if(this.age<=50&&this.age>=30){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean estVieux() {
+        if(this.age>50){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public boolean estJeune() {
+        if(this.age<30){
+            return true;
+        }else{
+            return false;
+        }
+    }
 	
 	
 

@@ -11,7 +11,7 @@ package td.tp10;
  */
 public class TP9_10 {
     public static void main(String[]args){
-        
+        //A
         //crée deux guerriers
         Guerrier g1 = new Guerrier("Hector le Barbare");
         Guerrier g2 = new Guerrier("Jean le Moustachu");
@@ -38,6 +38,8 @@ public class TP9_10 {
             System.out.println(g2.affichage());
         }
         System.out.println("Le guerrier est maintenant faible");
+        
+        //B
         
     }
 }
