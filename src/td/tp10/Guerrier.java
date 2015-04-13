@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package td.tp10;
+
+import java.util.Random;
 
 /**
  *
@@ -13,12 +10,11 @@ class Guerrier
 {
 	// Attributs d'un Guerrier
         private String nom;
-                
-        private int age;
         
-        private double force,
+        private int force,
                 experience,
-                etatSante;
+                etatSante,
+                age;
 
 	// Attribut commun à tous les Guerriers
 	private static int nb = 0 ; // Nombre total de Guerriers créés
@@ -49,30 +45,37 @@ class Guerrier
 	
 	
 	// Constructeurs
-	
+	Guerrier(String nom){ 
+            this.experience = experienceMin;
+            this.age = entierAleatoire(ageMinDepart,ageMaxDepart);
+            this.etatSante = entierAleatoire(santeMin,santeMax);
+            this.force = entierAleatoire(forceMin,forceMax);
+            this.nom = nom;
+        }
 	
 		
 	/************ Méthodes **************/
-	
-	// Getteurs	de niveau 1
-	
-	
-		
-	// Getteurs de niveau 2
-	
-	
-	// Setteurs de niveau 1
-	
-	
-	
-	
-	// Setteurs de niveau 2
-		
-	
-	
+        //Assesseurs
+	public int getForce(){ return this.force; }
+        public int getExperience(){ return this.experience; }
 	
 	// Autres
+        public void vieillir(){ this.age+=1; }
 	
+        public boolean estMort(){
+            if(this.etatSante<=0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        public boolean estVivant(){ 
+            if(this.etatSante>0){
+                return true;
+            }else{
+                return false;
+            }
+        }
 	
 	public void evoluer()
 	{
@@ -100,10 +103,10 @@ class Guerrier
 	
 	
 	/*********** Préparation à l'affichage  : méthode toString ******************/
-	
-	
-	
-		
+	public String toString(){
+            return "Le guerrier "+this.nom+" a "+this.force+" points de force, "+this.etatSante+" points de vie, "+this.experience+" points d'expérience, et est agé de "+this.age+" ans.";
+        }
+        
 	/************ Outils locaux (private) **********************/
 	private static boolean chance(double x) {		return Math.random()<x ;	}
 	
