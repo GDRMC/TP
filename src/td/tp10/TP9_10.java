@@ -40,6 +40,18 @@ public class TP9_10 {
         System.out.println("Le guerrier est maintenant faible");
         
         //B
-        
+        Guerrier g3 = new Guerrier("Alphonce le rapide");
+        Guerrier gC = new Guerrier("La Muraille");
+        System.out.println(g3.toString()+"\n"+gC.toString());
+        System.out.println("===>Combat");
+        while(g3.estVivant()&&gC.estVivant()){
+            g3.combattre(gC);
+            System.out.println(g3.toString()+"\n"+gC.toString());
+        }
+        if(g3.estMort()){
+            System.out.println(g3.getNom()+" est mort");
+        }else{
+            System.out.println(gC.getNom()+" est mort");
+        }
     }
 }

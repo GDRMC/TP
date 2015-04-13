@@ -65,6 +65,7 @@ class Guerrier
         //Assesseurs
 	public int getForce(){ return this.force; }
         public int getExperience(){ return this.experience; }
+        public String getNom(){ return this.nom; }
         
         public void modifierExperience(int n){
             this.experience+=n;
@@ -97,6 +98,29 @@ class Guerrier
                 return false;
             }
         }
+        public boolean estAdulte() {
+            if(this.age<=50&&this.age>=30){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        public boolean estVieux() {
+            if(this.age>50){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        public boolean estJeune() {
+            if(this.age<30){
+                return true;
+            }else{
+                return false;
+            }
+        }
         public char affichage(){
             if(!this.estFaible()){
                 return '|';
@@ -105,7 +129,20 @@ class Guerrier
             }
         }
         
-        
+        public void combattre(Guerrier adversaire){
+            int diffExp = this.experience-adversaire.experience;
+            int diffForce = this.force-adversaire.force;
+            int aleatoire = entierAleatoire(-this.chanceMax,this.chanceMax);
+            if(diffExp+diffForce+aleatoire<=0){
+                //l'adversaire gagne
+                adversaire.experience+=this.gainExperience;
+                this.etatSante+=this.impactBlessure;
+            }else{
+                //l'adversaire perd
+                this.experience+=this.gainExperience;
+                adversaire.etatSante+=this.impactBlessure;
+            }
+        }
 	
 	public void evoluer()
 	{
@@ -156,31 +193,5 @@ class Guerrier
 	private static boolean chance(double x) {		return Math.random()<x ;	}
 	
 	private int entierAleatoire(int min, int max){ return (int)(min+(max+1-min)*Math.random()) ;}
-
-    public boolean estAdulte() {
-        if(this.age<=50&&this.age>=30){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public boolean estVieux() {
-        if(this.age>50){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public boolean estJeune() {
-        if(this.age<30){
-            return true;
-        }else{
-            return false;
-        }
-    }
-	
-	
 
 }
