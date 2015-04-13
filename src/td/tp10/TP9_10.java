@@ -75,5 +75,16 @@ public class TP9_10 {
         c1.ajouter(new Guerrier("Warrior la Madame"));
         c1.ajouter(new Guerrier("Samuel l'Absent"));
         System.out.println(c1.toString());
+        
+        System.out.println("===>Vieillissement");
+        while(!c1.estDecime()){
+            c1.vieillir();
+        }
+        
+        System.out.println(c1.toString()+"c1 est decimé: "+c1.estDecime());
+        
+        System.out.println("===>Suppression guerriers morts");
+        c1.nettoyer();
+        System.out.println(c1.toString());
     }
 }
