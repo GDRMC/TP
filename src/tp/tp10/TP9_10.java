@@ -86,5 +86,8 @@ public class TP9_10 {
         System.out.println("===>Suppression guerriers morts");
         c1.nettoyer();
         System.out.println(c1.toString());
+        
+        System.out.println("===>Simulation");
+        Simulation sim = new Simulation();
     }
 }

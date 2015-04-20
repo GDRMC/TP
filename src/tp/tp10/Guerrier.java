@@ -66,6 +66,7 @@ class Guerrier
 	public int getForce(){ return this.force; }
         public int getExperience(){ return this.experience; }
         public String getNom(){ return this.nom; }
+        public int getAge(){ return this.age; }
         
         public void modifierExperience(int n){
             this.experience+=n;

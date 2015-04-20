@@ -1,5 +1,6 @@
 package tp.tp10;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -65,4 +66,21 @@ public class Clan {
         return toReturn;
     }
     
+    public int getPlusVieux(){
+        if(!this.estDecime()){
+            Guerrier toReturn = this.elements.get(0);
+            for(int i=0;i<this.elements.size();i++){
+                if(this.elements.get(i).getAge()>=toReturn.getAge()){
+                    toReturn = this.elements.get(i);
+                }
+            }
+            return toReturn.getAge();
+        }
+        return 0;
+    }
+    
+
+    public ArrayList<Guerrier> getList(){
+       return this.elements; 
+    }
 }
