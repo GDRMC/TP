@@ -49,12 +49,18 @@ public class Clan {
         return valides;
     }
     
-    public void nettoyer(){
-        for(int i=elements.size()-1;i>=0;i--){
-            if (elements.get(i).estMort()){
-                elements.remove(i);
+    public Clan nettoyer(){
+        ArrayList<Guerrier>newl = new ArrayList();
+        for (int i=0;i<elements.size();i++){
+            if(!elements.get(i).estMort()){
+                newl.add(elements.get(i));
             }
         }
+        Clan tr = new Clan();
+        for (int i=0;i<newl.size();i++){
+                tr.ajouter(newl.get(i));
+        }
+        return tr;
     } 
     
     public String affichage(){

@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public class Simulation {
     private ArrayList<Clan>simul = new ArrayList();
+    private boolean end = false;
     
     Simulation(){ 
         simuler();
@@ -21,9 +22,10 @@ public class Simulation {
     public void simuler(){
         ajouterGuerriers(20,10);
         //vieillissement
-        while(!finSim()){
+        while(!this.end){
             for(int i=0;i<simul.size();i++){
                 vieillirEtAfficheClan(simul.get(i));
+                this.end=isAllDecime();
             }
         }
     }
@@ -48,20 +50,19 @@ public class Simulation {
     private void vieillirEtAfficheClan(Clan cl){
         for(int i=0;i<cl.getList().size();i++){ //par clan
             simul.get(i).vieillir();
-            simul.get(i).nettoyer();
+            simul = simul.get(i).nettoyer();
             System.out.println("La moyenne d'âge du clan est de "+calcMoyAgeClan(cl)+" ans");
             System.out.println("Clan "+i+" "+simul.get(i).toString());
         }
     }
-
-    private boolean finSim() {
+    
+    private boolean isAllDecime(){
         boolean end = true;
         for(int i=0;i<this.simul.size();i++){
             if(!this.simul.get(i).estDecime()){
                 end = false;
-            }
+            } 
         }
-        System.out.println(end);
         return end;
     }
 }
