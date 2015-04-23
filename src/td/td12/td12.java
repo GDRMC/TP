@@ -63,4 +63,16 @@ public class td12 {
             return -1;
         }
     }
+    
+    public static ArrayList<Personne> personnesNeesEn(ArrayList<Personne>l,int a){
+        ArrayList<Personne>newtab = new ArrayList();
+        int i = position(l,a);
+        if(i!=-1){
+            newtab.add(l.get(i));
+            while(((i+1)<l.size())&&a==l.get(i+1).getAnneeNaissance()){
+                newtab.add(l.get(i+1));
+            }
+        }
+        return newtab;
+    }
 }
