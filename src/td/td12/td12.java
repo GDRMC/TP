@@ -22,6 +22,7 @@ public class td12 {
         liste=trier(liste);
     }
     
+    //Insertion à la meilleure place
     public static void inserer(ArrayList<Personne>l,Personne p){
         int i=0;
         while(i<l.size()&&p.getAnneeNaissance()>=l.get(i).getAnneeNaissance()){
@@ -30,6 +31,7 @@ public class td12 {
         l.add(i--, p);
     }
     
+    //Tri d'ArrayList à la meilleure place
     public static ArrayList<Personne> trier(ArrayList<Personne>l){
         ArrayList<Personne>newtab = new ArrayList();
         for(int i=0;i<l.size();i++){
@@ -38,5 +40,27 @@ public class td12 {
         return newtab;
     }
     
-    
+    //Recherche dichotomique à partir d'un tableau trié
+    public static int position(ArrayList<Personne>l,int a){
+        ArrayList<Personne>newtab = new ArrayList();
+        int min=0, max=l.size()-1, pos=(max+min)/2;
+        while(min<max&&a!=l.get(pos).getAnneeNaissance()){
+            if(a<l.get(pos).getAnneeNaissance()){
+                max = pos-1;
+            }
+            else{
+                min = pos+1;
+            }
+            pos = (max+min)/2;
+        }
+        if(a==l.get(pos).getAnneeNaissance()){
+            int i=pos;
+            while(l.get(i-1).getAnneeNaissance()==a){
+                i--;
+            }
+            return i;
+        }else{
+            return -1;
+        }
+    }
 }
