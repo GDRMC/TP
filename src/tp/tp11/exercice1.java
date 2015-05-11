@@ -30,6 +30,8 @@ System.out.println("La liste des fichiers du dossier est:");
 for(int i=0;i<list.length;i++){
     System.out.println(list[i]);
 }
+double b = f.length();
+System.out.println(b+" B");
 
 	
 /********** Utilisation de la classe FILEREADER ***************/	
