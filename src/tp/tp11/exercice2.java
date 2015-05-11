@@ -7,7 +7,54 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.LineNumberReader;
 import java.io.StreamTokenizer;
+import java.util.ArrayList;
 
+
+public class exercice2 {
+    public static void main(String[]args) throws FileNotFoundException, IOException{
+        File f = new File("C:/Users/USER/Documents/NetBeansProjects/TP/src/scores.txt"); 
+            
+        ArrayList<Score>list = new ArrayList();
+        
+        //remplissage des listes
+        try{
+            StreamTokenizer stream = new StreamTokenizer(new FileReader(f));
+            int curseur = 0;
+            while(stream.ttype != StreamTokenizer.TT_EOF){
+                stream.nextToken();
+                String bufferNom = stream.sval;
+                stream.nextToken();
+                double bufferScore = stream.nval;
+                list.add(new Score(bufferNom,bufferScore));
+            }
+            System.out.println("Le fichier a été lu par le programme");
+        } catch(IOException e){ System.out.println("Une erreur est survenue lors de la récupération des données de scores"); }
+        
+        //calcul score moyen
+        int moy = 0;
+        double max = list.size();
+        for(int i=0;i<list.size();i++){
+            moy = moy+(int)list.get(i).getScore();
+            if(list.get(i).getScore()>max){
+                max=list.get(i).getScore();
+            }
+        }
+        moy=moy/list.size();
+        
+        // ecriture dans le fichier de sortie
+        try{
+            FileWriter output = new FileWriter(new File("C:/Users/USER/Documents/NetBeansProjects/TP/src/resultats_ex2.txt"));
+            output.write("La moyenne des scores est: "+moy);
+            output.write("\nLe score maximal est: "+max);
+            output.write("\nLe nombre de scores est: "+list.size());
+            output.close();
+            System.out.println("Les résultats ont été écrits dans le fichier");
+        } catch(IOException e){ System.out.println("Une erreur est survenue lors de l'écriture dans le fichier de résultats"); }
+    }
+}
+
+
+/* PREMIERE VERSION
 public class exercice2 {
     public static void main(String[]args) throws FileNotFoundException, IOException{
         
@@ -66,3 +113,4 @@ public class exercice2 {
         } catch(IOException e){ System.out.println("Une erreur est survenue lors de l'écriture dans le fichier de résultats"); }
     }
 }
+*/
