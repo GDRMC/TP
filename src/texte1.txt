@@ -1,2 +1,2 @@
 bonjour
-ceci est un fichier contenant des mots et des données numériques comme 5 12 4.5 et 18
+ceci est un fichier contenant des mots et des donnÃ©es numÃ©riques comme 5 12 4.5 et 18
