@@ -64,6 +64,7 @@ while(entree2.ttype != StreamTokenizer.TT_EOF){
     //PROBLEME A CORRIGER: PAS DE DETECTION DE FIN DE LIGNE OU DE FICHIER (?!)
     if(entree2.ttype == StreamTokenizer.TT_EOL){
         content1.add("!"); //saut de ligne car EOL
+        //System.out.println("Saut de ligne inséré");
     } else if(entree2.ttype == StreamTokenizer.TT_EOF){
         content1.add("#"); //fin de fichier EOF
     } else if(entree2.ttype == StreamTokenizer.TT_WORD){

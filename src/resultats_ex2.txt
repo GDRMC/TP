@@ -1,0 +1,3 @@
+La moyenne des scores est: 372
+Le score maximal est: 567.0
+Le nombre de scores est: 13
