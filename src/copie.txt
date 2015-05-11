@@ -1,0 +1,1 @@
+bonjour ceci est un fichier contenant des mots et des données numériques comme 5.0 12.0 4.5 et 18.0 
