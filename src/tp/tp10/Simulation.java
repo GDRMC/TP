@@ -50,7 +50,7 @@ public class Simulation {
     private void vieillirEtAfficheClan(Clan cl){
         for(int i=0;i<cl.getList().size();i++){ //par clan
             simul.get(i).vieillir();
-            simul = simul.get(i).nettoyer();
+            //simul = simul.get(i).nettoyer();
             System.out.println("La moyenne d'âge du clan est de "+calcMoyAgeClan(cl)+" ans");
             System.out.println("Clan "+i+" "+simul.get(i).toString());
         }
